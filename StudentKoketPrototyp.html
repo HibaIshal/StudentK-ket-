@@ -23,11 +23,7 @@
             --radius-sm: 8px;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'DM Sans', sans-serif;
@@ -36,25 +32,16 @@
             min-height: 100vh;
         }
 
-        h1, h2, h3 {
-            font-family: 'Fraunces', serif;
-        }
+        h1, h2, h3 { font-family: 'Fraunces', serif; }
 
-        .page {
-            display: none;
-            animation: fadeIn 0.3s ease;
-        }
-
-        .page.active {
-            display: block;
-        }
+        .page { display: none; animation: fadeIn 0.3s ease; }
+        .page.active { display: block; }
 
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Navigation */
         nav {
             background: var(--white);
             padding: 1rem 2rem;
@@ -90,11 +77,7 @@
             font-size: 1.2rem;
         }
 
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-        }
+        .nav-links { display: flex; gap: 2rem; align-items: center; }
 
         .nav-link {
             color: var(--secondary);
@@ -105,9 +88,7 @@
             position: relative;
         }
 
-        .nav-link:hover {
-            color: var(--primary);
-        }
+        .nav-link:hover { color: var(--primary); }
 
         .nav-link::after {
             content: '';
@@ -120,15 +101,9 @@
             transition: width 0.2s;
         }
 
-        .nav-link:hover::after {
-            width: 100%;
-        }
+        .nav-link:hover::after { width: 100%; }
 
-        .cart-icon {
-            position: relative;
-            cursor: pointer;
-            padding: 0.5rem;
-        }
+        .cart-icon { position: relative; cursor: pointer; padding: 0.5rem; }
 
         .cart-badge {
             position: absolute;
@@ -146,7 +121,6 @@
             font-weight: 700;
         }
 
-        /* Buttons */
         .btn {
             padding: 0.875rem 1.75rem;
             border-radius: var(--radius-sm);
@@ -158,25 +132,11 @@
             font-family: 'DM Sans', sans-serif;
         }
 
-        .btn-primary {
-            background: var(--primary);
-            color: white;
-        }
-
+        .btn-primary { background: var(--primary); color: white; }
         .btn-primary:hover {
             background: var(--primary-dark);
             transform: translateY(-2px);
             box-shadow: var(--shadow);
-        }
-
-        .btn-secondary {
-            background: var(--secondary);
-            color: white;
-        }
-
-        .btn-secondary:hover {
-            background: #2d2f45;
-            transform: translateY(-2px);
         }
 
         .btn-outline {
@@ -184,20 +144,10 @@
             border: 2px solid var(--secondary);
             color: var(--secondary);
         }
+        .btn-outline:hover { background: var(--secondary); color: white; }
 
-        .btn-outline:hover {
-            background: var(--secondary);
-            color: white;
-        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
 
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        /* Hero Section */
         .hero {
             background: linear-gradient(135deg, var(--secondary) 0%, #4a4d6a 100%);
             color: white;
@@ -223,22 +173,9 @@
             50% { transform: scale(1.1); }
         }
 
-        .hero-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin: 0 auto 2rem;
-        }
+        .hero-content { position: relative; z-index: 1; }
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.25rem; opacity: 0.9; max-width: 600px; margin: 0 auto 2rem; }
 
         .hero-tag {
             display: inline-block;
@@ -250,7 +187,6 @@
             margin-bottom: 1.5rem;
         }
 
-        /* Featured Package */
         .featured-package {
             background: var(--white);
             border-radius: var(--radius);
@@ -266,20 +202,15 @@
         }
 
         .package-image {
-            background: linear-gradient(135deg, var(--accent) 0%, #6a9c89 100%);
             border-radius: var(--radius-sm);
             height: 250px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 4rem;
+            overflow: hidden;
+            background: var(--gray-100);
         }
 
-        .package-content h2 {
-            color: var(--secondary);
-            margin-bottom: 0.5rem;
-        }
+        .package-image img { width: 100%; height: 100%; object-fit: cover; }
+
+        .package-content h2 { color: var(--secondary); margin-bottom: 0.5rem; }
 
         .package-badge {
             display: inline-block;
@@ -292,11 +223,7 @@
             margin-bottom: 1rem;
         }
 
-        .package-content p {
-            color: var(--gray-600);
-            margin-bottom: 1rem;
-            line-height: 1.6;
-        }
+        .package-content p { color: var(--gray-600); margin-bottom: 1rem; line-height: 1.6; }
 
         .package-price {
             font-family: 'Fraunces', serif;
@@ -305,12 +232,7 @@
             margin-bottom: 1rem;
         }
 
-        .package-items {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
-        }
+        .package-items { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }
 
         .package-item {
             background: var(--gray-100);
@@ -320,7 +242,6 @@
             color: var(--gray-600);
         }
 
-        /* Section Headers */
         .section-header {
             display: flex;
             justify-content: space-between;
@@ -328,18 +249,10 @@
             margin-bottom: 1.5rem;
         }
 
-        .section-header h2 {
-            font-size: 1.75rem;
-        }
+        .section-header h2 { font-size: 1.75rem; }
 
-        .view-all {
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 500;
-            cursor: pointer;
-        }
+        .view-all { color: var(--primary); text-decoration: none; font-weight: 500; cursor: pointer; }
 
-        /* Product Grid */
         .product-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -360,19 +273,10 @@
             box-shadow: var(--shadow-hover);
         }
 
-        .product-image {
-            height: 180px;
-            background: var(--gray-100);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: var(--gray-400);
-        }
+        .product-image { height: 180px; background: var(--gray-100); overflow: hidden; }
+        .product-image img { width: 100%; height: 100%; object-fit: cover; }
 
-        .product-info {
-            padding: 1.25rem;
-        }
+        .product-info { padding: 1.25rem; }
 
         .product-category {
             font-size: 0.8rem;
@@ -382,11 +286,7 @@
             letter-spacing: 0.5px;
         }
 
-        .product-title {
-            font-weight: 600;
-            margin: 0.5rem 0;
-            color: var(--secondary);
-        }
+        .product-title { font-weight: 600; margin: 0.5rem 0; color: var(--secondary); }
 
         .product-price {
             font-family: 'Fraunces', serif;
@@ -403,12 +303,8 @@
             font-size: 0.9rem;
         }
 
-        .product-rating span {
-            color: var(--gray-600);
-            font-size: 0.85rem;
-        }
+        .product-rating span { color: var(--gray-600); font-size: 0.85rem; }
 
-        /* Filters */
         .filters {
             background: var(--white);
             padding: 1.5rem;
@@ -420,10 +316,7 @@
             align-items: center;
         }
 
-        .filter-label {
-            font-weight: 600;
-            color: var(--secondary);
-        }
+        .filter-label { font-weight: 600; color: var(--secondary); }
 
         .filter-btn {
             padding: 0.5rem 1rem;
@@ -442,7 +335,6 @@
             color: white;
         }
 
-        /* Product Detail Page */
         .product-detail {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -457,17 +349,12 @@
             background: var(--gray-100);
             border-radius: var(--radius-sm);
             height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 6rem;
-            color: var(--gray-400);
+            overflow: hidden;
         }
 
-        .product-details h1 {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
+        .product-gallery img { width: 100%; height: 100%; object-fit: cover; }
+
+        .product-details h1 { font-size: 2rem; margin-bottom: 0.5rem; }
 
         .product-details .price {
             font-family: 'Fraunces', serif;
@@ -476,11 +363,7 @@
             margin: 1rem 0;
         }
 
-        .product-description {
-            color: var(--gray-600);
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-        }
+        .product-description { color: var(--gray-600); line-height: 1.8; margin-bottom: 1.5rem; }
 
         .product-specs {
             background: var(--gray-100);
@@ -496,13 +379,8 @@
             border-bottom: 1px solid var(--gray-200);
         }
 
-        .spec-row:last-child {
-            border-bottom: none;
-        }
-
-        .spec-label {
-            font-weight: 600;
-        }
+        .spec-row:last-child { border-bottom: none; }
+        .spec-label { font-weight: 600; }
 
         .quantity-selector {
             display: flex;
@@ -522,22 +400,11 @@
             transition: all 0.2s;
         }
 
-        .qty-btn:hover {
-            border-color: var(--primary);
-            color: var(--primary);
-        }
+        .qty-btn:hover { border-color: var(--primary); color: var(--primary); }
 
-        .qty-value {
-            font-size: 1.25rem;
-            font-weight: 600;
-            min-width: 40px;
-            text-align: center;
-        }
+        .qty-value { font-size: 1.25rem; font-weight: 600; min-width: 40px; text-align: center; }
 
-        /* Reviews Section */
-        .reviews-section {
-            margin-top: 3rem;
-        }
+        .reviews-section { margin-top: 3rem; }
 
         .review-card {
             background: var(--white);
@@ -554,49 +421,11 @@
             margin-bottom: 0.75rem;
         }
 
-        .reviewer {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
+        .reviewer-name { font-weight: 600; }
+        .review-date { color: var(--gray-400); font-size: 0.85rem; }
+        .review-text { color: var(--gray-600); line-height: 1.6; }
 
-        .reviewer-avatar {
-            width: 40px;
-            height: 40px;
-            background: var(--accent);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 600;
-        }
-
-        .reviewer-name {
-            font-weight: 600;
-        }
-
-        .review-date {
-            color: var(--gray-400);
-            font-size: 0.85rem;
-        }
-
-        .review-stars {
-            color: #FFB800;
-        }
-
-        .review-text {
-            color: var(--gray-600);
-            line-height: 1.6;
-        }
-
-        /* Cart Page */
-        .cart-container {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 2rem;
-            margin-top: 2rem;
-        }
+        .cart-container { display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; }
 
         .cart-items {
             background: var(--white);
@@ -613,63 +442,37 @@
             border-bottom: 1px solid var(--gray-200);
         }
 
-        .cart-item:last-child {
-            border-bottom: none;
-        }
+        .cart-item:last-child { border-bottom: none; }
 
         .cart-item-image {
             width: 80px;
             height: 80px;
             background: var(--gray-100);
             border-radius: var(--radius-sm);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            color: var(--gray-400);
+            overflow: hidden;
         }
 
-        .cart-item-info h4 {
-            margin-bottom: 0.25rem;
-        }
+        .cart-item-image img { width: 100%; height: 100%; object-fit: cover; }
 
-        .cart-item-info p {
-            color: var(--gray-600);
-            font-size: 0.9rem;
-        }
-
-        .cart-item-qty {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .cart-item-qty button {
-            width: 30px;
-            height: 30px;
-            border: 1px solid var(--gray-200);
-            background: transparent;
-            border-radius: 4px;
-            cursor: pointer;
-        }
+        .cart-item-details h4 { margin-bottom: 0.25rem; }
+        .cart-item-details p { color: var(--gray-600); font-size: 0.9rem; }
 
         .cart-item-price {
             font-family: 'Fraunces', serif;
             font-size: 1.25rem;
             color: var(--primary);
-            min-width: 80px;
-            text-align: right;
         }
 
-        .cart-item-remove {
+        .remove-btn {
+            background: none;
+            border: none;
             color: var(--gray-400);
             cursor: pointer;
             padding: 0.5rem;
+            transition: color 0.2s;
         }
 
-        .cart-item-remove:hover {
-            color: var(--primary);
-        }
+        .remove-btn:hover { color: var(--primary); }
 
         .cart-summary {
             background: var(--white);
@@ -680,38 +483,30 @@
             top: 100px;
         }
 
-        .cart-summary h3 {
-            margin-bottom: 1.5rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid var(--gray-200);
-        }
+        .cart-summary h3 { margin-bottom: 1.5rem; }
 
         .summary-row {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
+            color: var(--gray-600);
         }
 
         .summary-row.total {
-            font-size: 1.25rem;
-            font-weight: 700;
-            padding-top: 1rem;
             border-top: 2px solid var(--gray-200);
+            padding-top: 1rem;
             margin-top: 1rem;
+            font-weight: 700;
+            color: var(--secondary);
         }
 
-        .summary-row.total .price {
+        .summary-row .price {
             font-family: 'Fraunces', serif;
             color: var(--primary);
+            font-size: 1.5rem;
         }
 
-        /* Checkout Page */
-        .checkout-container {
-            display: grid;
-            grid-template-columns: 1.5fr 1fr;
-            gap: 2rem;
-            margin-top: 2rem;
-        }
+        .checkout-container { display: grid; grid-template-columns: 1.5fr 1fr; gap: 2rem; }
 
         .checkout-form {
             background: var(--white);
@@ -719,29 +514,20 @@
             padding: 2rem;
         }
 
-        .form-section {
-            margin-bottom: 2rem;
-        }
-
-        .form-section h3 {
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid var(--gray-200);
-        }
-
-        .form-group {
-            margin-bottom: 1rem;
-        }
+        .form-section { margin-bottom: 2rem; }
+        .form-section h3 { margin-bottom: 1rem; font-size: 1.1rem; }
+        .form-group { margin-bottom: 1rem; }
 
         .form-group label {
             display: block;
             margin-bottom: 0.5rem;
             font-weight: 500;
+            color: var(--secondary);
         }
 
-        .form-group input, .form-group select {
+        .form-group input {
             width: 100%;
-            padding: 0.875rem;
+            padding: 0.875rem 1rem;
             border: 2px solid var(--gray-200);
             border-radius: var(--radius-sm);
             font-family: 'DM Sans', sans-serif;
@@ -749,30 +535,19 @@
             transition: border-color 0.2s;
         }
 
-        .form-group input:focus, .form-group select:focus {
-            outline: none;
-            border-color: var(--primary);
-        }
+        .form-group input:focus { outline: none; border-color: var(--primary); }
 
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-        }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 
-        .payment-methods {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
+        .payment-methods { display: flex; gap: 1rem; margin-bottom: 1.5rem; }
 
         .payment-method {
             flex: 1;
             padding: 1rem;
             border: 2px solid var(--gray-200);
             border-radius: var(--radius-sm);
-            cursor: pointer;
             text-align: center;
+            cursor: pointer;
             transition: all 0.2s;
         }
 
@@ -781,74 +556,56 @@
             background: rgba(224, 122, 95, 0.05);
         }
 
-        .payment-method-icon {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
+        .payment-method-icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
 
-        /* Login/Register Page */
         .auth-container {
-            max-width: 450px;
-            margin: 3rem auto;
+            max-width: 400px;
+            margin: 4rem auto;
             background: var(--white);
             border-radius: var(--radius);
-            padding: 2.5rem;
+            padding: 2rem;
             box-shadow: var(--shadow);
         }
 
-        .auth-header {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
+        .auth-header { text-align: center; margin-bottom: 2rem; }
+        .auth-header h2 { margin-bottom: 0.5rem; }
+        .auth-header p { color: var(--gray-600); }
 
-        .auth-header h2 {
-            margin-bottom: 0.5rem;
-        }
-
-        .auth-header p {
-            color: var(--gray-600);
-        }
-
-        .auth-tabs {
-            display: flex;
-            margin-bottom: 2rem;
-            border-bottom: 2px solid var(--gray-200);
-        }
+        .auth-tabs { display: flex; border-bottom: 2px solid var(--gray-200); margin-bottom: 2rem; }
 
         .auth-tab {
             flex: 1;
+            text-align: center;
             padding: 1rem;
-            text-align: center;
             cursor: pointer;
-            font-weight: 600;
-            color: var(--gray-400);
+            font-weight: 500;
+            color: var(--gray-600);
             transition: all 0.2s;
-            border-bottom: 2px solid transparent;
-            margin-bottom: -2px;
-        }
-
-        .auth-tab.active {
-            color: var(--primary);
-            border-bottom-color: var(--primary);
-        }
-
-        .auth-form .btn {
-            width: 100%;
-            margin-top: 1rem;
-        }
-
-        .auth-divider {
-            text-align: center;
-            margin: 1.5rem 0;
             position: relative;
         }
+
+        .auth-tab.active { color: var(--primary); }
+
+        .auth-tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--primary);
+        }
+
+        .auth-form button { width: 100%; margin-top: 1rem; }
+
+        .auth-divider { text-align: center; margin: 1.5rem 0; position: relative; }
 
         .auth-divider::before {
             content: '';
             position: absolute;
-            left: 0;
             top: 50%;
-            width: 100%;
+            left: 0;
+            right: 0;
             height: 1px;
             background: var(--gray-200);
         }
@@ -858,42 +615,25 @@
             padding: 0 1rem;
             position: relative;
             color: var(--gray-400);
-            font-size: 0.9rem;
         }
 
-        /* Success Page */
-        .success-container {
-            text-align: center;
-            padding: 4rem 2rem;
-        }
+        .success-container { text-align: center; padding: 4rem 2rem; max-width: 500px; margin: 0 auto; }
 
         .success-icon {
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
             background: var(--accent);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 2rem;
-            font-size: 3rem;
+            font-size: 2.5rem;
             color: white;
-            animation: scaleIn 0.5s ease;
         }
 
-        @keyframes scaleIn {
-            from { transform: scale(0); }
-            to { transform: scale(1); }
-        }
-
-        .success-container h1 {
-            margin-bottom: 1rem;
-        }
-
-        .success-container p {
-            color: var(--gray-600);
-            margin-bottom: 2rem;
-        }
+        .success-container h1 { margin-bottom: 1rem; }
+        .success-container p { color: var(--gray-600); margin-bottom: 1rem; }
 
         .order-number {
             background: var(--gray-100);
@@ -909,7 +649,6 @@
             color: var(--secondary);
         }
 
-        /* Footer */
         footer {
             background: var(--secondary);
             color: white;
@@ -925,84 +664,20 @@
             gap: 2rem;
         }
 
-        .footer-brand h3 {
-            font-family: 'Fraunces', serif;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
+        .footer-brand h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; margin-bottom: 1rem; }
+        .footer-brand p { opacity: 0.8; line-height: 1.6; }
 
-        .footer-brand p {
-            opacity: 0.8;
-            line-height: 1.6;
-        }
+        .footer-links h4 { margin-bottom: 1rem; font-size: 1rem; }
+        .footer-links ul { list-style: none; }
+        .footer-links li { margin-bottom: 0.5rem; }
+        .footer-links a { color: white; opacity: 0.8; text-decoration: none; transition: opacity 0.2s; }
+        .footer-links a:hover { opacity: 1; }
 
-        .footer-links h4 {
-            margin-bottom: 1rem;
-            font-size: 1rem;
-        }
+        .breadcrumb { display: flex; gap: 0.5rem; margin-bottom: 1rem; font-size: 0.9rem; }
+        .breadcrumb a { color: var(--gray-600); text-decoration: none; }
+        .breadcrumb a:hover { color: var(--primary); }
+        .breadcrumb span { color: var(--gray-400); }
 
-        .footer-links ul {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-links a {
-            color: white;
-            opacity: 0.8;
-            text-decoration: none;
-            transition: opacity 0.2s;
-        }
-
-        .footer-links a:hover {
-            opacity: 1;
-        }
-
-        /* Breadcrumb */
-        .breadcrumb {
-            display: flex;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
-        }
-
-        .breadcrumb a {
-            color: var(--gray-600);
-            text-decoration: none;
-        }
-
-        .breadcrumb a:hover {
-            color: var(--primary);
-        }
-
-        .breadcrumb span {
-            color: var(--gray-400);
-        }
-
-        /* Empty Cart */
-        .empty-cart {
-            text-align: center;
-            padding: 4rem 2rem;
-        }
-
-        .empty-cart-icon {
-            font-size: 4rem;
-            color: var(--gray-400);
-            margin-bottom: 1rem;
-        }
-
-        .empty-cart h3 {
-            margin-bottom: 0.5rem;
-        }
-
-        .empty-cart p {
-            color: var(--gray-600);
-            margin-bottom: 1.5rem;
-        }
-
-        /* Toast Notification */
         .toast {
             position: fixed;
             bottom: 2rem;
@@ -1021,49 +696,21 @@
             z-index: 1000;
         }
 
-        .toast.show {
-            transform: translateY(0);
-            opacity: 1;
-        }
+        .toast.show { transform: translateY(0); opacity: 1; }
+        .toast-icon { color: var(--accent); }
 
-        .toast-icon {
-            color: var(--accent);
-        }
-
-        /* Responsive */
         @media (max-width: 768px) {
-            .featured-package {
-                grid-template-columns: 1fr;
-            }
-
-            .product-detail {
-                grid-template-columns: 1fr;
-            }
-
-            .cart-container {
-                grid-template-columns: 1fr;
-            }
-
-            .checkout-container {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-content {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .nav-links {
-                gap: 1rem;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
+            .featured-package { grid-template-columns: 1fr; }
+            .product-detail { grid-template-columns: 1fr; }
+            .cart-container { grid-template-columns: 1fr; }
+            .checkout-container { grid-template-columns: 1fr; }
+            .footer-content { grid-template-columns: 1fr 1fr; }
+            .nav-links { gap: 1rem; }
+            .hero h1 { font-size: 2rem; }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav>
         <div class="logo" onclick="showPage('home')">
             <div class="logo-icon">🍳</div>
@@ -1090,14 +737,16 @@
             <div class="hero-content">
                 <span class="hero-tag">🎓 Gjort för studenter</span>
                 <h1>Utrusta ditt kök utan att spräcka budgeten</h1>
-                <p>Prisvärda köksprodukter och färdiga "flytta hemifrån"-paket. Börja laga egen mat och spara pengar!</p>
+                <p>Prisvärda köksprodukter och färdiga "flytta hemifrån" paket. Börja laga egen mat och spara pengar!</p>
                 <button class="btn btn-primary" onclick="showPage('products')">Utforska produkter</button>
             </div>
         </section>
 
         <div class="container">
             <div class="featured-package">
-                <div class="package-image">📦</div>
+                <div class="package-image">
+                    <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&q=80&w=500" alt="Flytta hemifrån paket">
+                </div>
                 <div class="package-content">
                     <span class="package-badge">Bästsäljare</span>
                     <h2>Flytta hemifrån-paketet</h2>
@@ -1122,50 +771,50 @@
 
             <div class="product-grid">
                 <div class="product-card" onclick="showPage('product-detail')">
-                    <div class="product-image">🍳</div>
+                    <div class="product-image">
+                        <img src="https://images.pexels.com/photos/3298607/pexels-photo-3298607.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Stekpanna 24cm">
+                    </div>
                     <div class="product-info">
                         <span class="product-category">Stekning</span>
                         <h3 class="product-title">Stekpanna 24cm</h3>
                         <div class="product-price">149 kr</div>
-                        <div class="product-rating">
-                            ★★★★★ <span>(24 recensioner)</span>
-                        </div>
+                        <div class="product-rating">★★★★★ <span>(24 recensioner)</span></div>
                     </div>
                 </div>
 
                 <div class="product-card" onclick="showPage('product-detail')">
-                    <div class="product-image">🍲</div>
+                    <div class="product-image">
+                        <img src="https://images.pexels.com/photos/6287467/pexels-photo-6287467.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Kastrull 2L">
+                    </div>
                     <div class="product-info">
                         <span class="product-category">Kokning</span>
                         <h3 class="product-title">Kastrull 2L</h3>
                         <div class="product-price">129 kr</div>
-                        <div class="product-rating">
-                            ★★★★☆ <span>(18 recensioner)</span>
-                        </div>
+                        <div class="product-rating">★★★★☆ <span>(18 recensioner)</span></div>
                     </div>
                 </div>
 
                 <div class="product-card" onclick="showPage('product-detail')">
-                    <div class="product-image">🔪</div>
+                    <div class="product-image">
+                        <img src="https://images.pexels.com/photos/952366/pexels-photo-952366.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Kockkniv 20cm">
+                    </div>
                     <div class="product-info">
                         <span class="product-category">Knivar</span>
                         <h3 class="product-title">Kockkniv 20cm</h3>
                         <div class="product-price">199 kr</div>
-                        <div class="product-rating">
-                            ★★★★★ <span>(31 recensioner)</span>
-                        </div>
+                        <div class="product-rating">★★★★★ <span>(31 recensioner)</span></div>
                     </div>
                 </div>
 
                 <div class="product-card" onclick="showPage('product-detail')">
-                    <div class="product-image">🥄</div>
+                    <div class="product-image">
+                        <img src="https://images.pexels.com/photos/211760/pexels-photo-211760.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Slevsset 5-delar">
+                    </div>
                     <div class="product-info">
                         <span class="product-category">Redskap</span>
                         <h3 class="product-title">Slevsset 5-delar</h3>
                         <div class="product-price">89 kr</div>
-                        <div class="product-rating">
-                            ★★★★☆ <span>(12 recensioner)</span>
-                        </div>
+                        <div class="product-rating">★★★★☆ <span>(12 recensioner)</span></div>
                     </div>
                 </div>
             </div>
@@ -1189,7 +838,9 @@
 
             <div class="product-grid">
                 <div class="product-card" onclick="showPage('product-detail')">
-                    <div class="product-image">🍳</div>
+                    <div class="product-image">
+                        <img src="https://images.pexels.com/photos/3298607/pexels-photo-3298607.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Stekpanna 24cm">
+                    </div>
                     <div class="product-info">
                         <span class="product-category">Stekning</span>
                         <h3 class="product-title">Stekpanna 24cm</h3>
@@ -1199,7 +850,9 @@
                 </div>
 
                 <div class="product-card" onclick="showPage('product-detail')">
-                    <div class="product-image">🍲</div>
+                    <div class="product-image">
+                        <img src="https://images.pexels.com/photos/6287467/pexels-photo-6287467.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Kastrull 2L">
+                    </div>
                     <div class="product-info">
                         <span class="product-category">Kokning</span>
                         <h3 class="product-title">Kastrull 2L</h3>
@@ -1209,7 +862,9 @@
                 </div>
 
                 <div class="product-card" onclick="showPage('product-detail')">
-                    <div class="product-image">🔪</div>
+                    <div class="product-image">
+                        <img src="https://images.pexels.com/photos/952366/pexels-photo-952366.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Kockkniv 20cm">
+                    </div>
                     <div class="product-info">
                         <span class="product-category">Knivar</span>
                         <h3 class="product-title">Kockkniv 20cm</h3>
@@ -1219,7 +874,9 @@
                 </div>
 
                 <div class="product-card" onclick="showPage('product-detail')">
-                    <div class="product-image">🥄</div>
+                    <div class="product-image">
+                        <img src="https://images.pexels.com/photos/211760/pexels-photo-211760.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Slevsset 5-delar">
+                    </div>
                     <div class="product-info">
                         <span class="product-category">Redskap</span>
                         <h3 class="product-title">Slevsset 5-delar</h3>
@@ -1229,7 +886,9 @@
                 </div>
 
                 <div class="product-card" onclick="showPage('product-detail')">
-                    <div class="product-image">🥣</div>
+                    <div class="product-image">
+                        <img src="https://www.ikea.com/se/sv/images/products/sandskaedda-skal-ljust-grabeige__1199397_pe904473_s5.jpg" alt="Skålar 4-pack">
+                    </div>
                     <div class="product-info">
                         <span class="product-category">Servering</span>
                         <h3 class="product-title">Skålar 4-pack</h3>
@@ -1239,27 +898,33 @@
                 </div>
 
                 <div class="product-card" onclick="showPage('product-detail')">
-                    <div class="product-image">🫕</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1590794056226-79ef3a8147e1?auto=format&fit=crop&q=80&w=500" alt="Stor gryta 5L">
+                    </div>
                     <div class="product-info">
                         <span class="product-category">Kokning</span>
                         <h3 class="product-title">Stor gryta 5L</h3>
-                        <div class="product-price">249 kr</div>
+                        <div class="product-price">299 kr</div>
                         <div class="product-rating">★★★★☆ <span>(15)</span></div>
                     </div>
                 </div>
 
                 <div class="product-card" onclick="showPage('product-detail')">
-                    <div class="product-image">🍽️</div>
+                    <div class="product-image">
+                        <img src="https://images.pexels.com/photos/6611126/pexels-photo-6611126.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Tallrikar 6-pack">
+                    </div>
                     <div class="product-info">
                         <span class="product-category">Servering</span>
                         <h3 class="product-title">Tallrikar 6-pack</h3>
-                        <div class="product-price">119 kr</div>
+                        <div class="product-price">249 kr</div>
                         <div class="product-rating">★★★★★ <span>(22)</span></div>
                     </div>
                 </div>
 
                 <div class="product-card" onclick="showPage('product-detail')">
-                    <div class="product-image">🧂</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1580116270858-8a0d62b15426?auto=format&fit=crop&q=80&w=500" alt="Kryddburkar 6-pack">
+                    </div>
                     <div class="product-info">
                         <span class="product-category">Förvaring</span>
                         <h3 class="product-title">Kryddburkar 6-pack</h3>
@@ -1283,13 +948,13 @@
             </div>
 
             <div class="product-detail">
-                <div class="product-gallery">🍳</div>
+                <div class="product-gallery">
+                    <img src="https://images.pexels.com/photos/3298607/pexels-photo-3298607.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Stekpanna 24cm">
+                </div>
                 <div class="product-details">
                     <span class="product-category">Stekning</span>
                     <h1>Stekpanna 24cm</h1>
-                    <div class="product-rating">
-                        ★★★★★ <span>(24 recensioner)</span>
-                    </div>
+                    <div class="product-rating">★★★★★ <span>(24 recensioner)</span></div>
                     <div class="price">149 kr</div>
                     <p class="product-description">
                         Perfekt stekpanna för studenten! Non-stick beläggning gör det enkelt att steka och rengöra. 
@@ -1297,86 +962,40 @@
                     </p>
                     
                     <div class="product-specs">
-                        <div class="spec-row">
-                            <span class="spec-label">Material</span>
-                            <span>Aluminium med non-stick</span>
-                        </div>
-                        <div class="spec-row">
-                            <span class="spec-label">Diameter</span>
-                            <span>24 cm</span>
-                        </div>
-                        <div class="spec-row">
-                            <span class="spec-label">Induktion</span>
-                            <span>Ja</span>
-                        </div>
-                        <div class="spec-row">
-                            <span class="spec-label">Diskmaskin</span>
-                            <span>Ja</span>
-                        </div>
+                        <div class="spec-row"><span class="spec-label">Diameter</span><span>24 cm</span></div>
+                        <div class="spec-row"><span class="spec-label">Material</span><span>Aluminium med non-stick</span></div>
+                        <div class="spec-row"><span class="spec-label">Handtag</span><span>Värmeisolerande</span></div>
+                        <div class="spec-row"><span class="spec-label">Induktion</span><span>Ja</span></div>
                     </div>
 
                     <div class="quantity-selector">
                         <span>Antal:</span>
-                        <button class="qty-btn" onclick="updateQty(-1)">-</button>
+                        <button class="qty-btn" onclick="updateQty(-1)">−</button>
                         <span class="qty-value" id="qty">1</span>
                         <button class="qty-btn" onclick="updateQty(1)">+</button>
                     </div>
 
-                    <button class="btn btn-primary" onclick="addToCart('Stekpanna 24cm', 149)" style="width: 100%;">
-                        Lägg i kundvagn
-                    </button>
+                    <button class="btn btn-primary" onclick="addToCart('Stekpanna 24cm', 149)">Lägg i kundvagn</button>
                 </div>
             </div>
 
             <div class="reviews-section">
-                <h2>Recensioner från studenter</h2>
-                
+                <h2>Recensioner</h2>
                 <div class="review-card">
                     <div class="review-header">
-                        <div class="reviewer">
-                            <div class="reviewer-avatar">E</div>
-                            <div>
-                                <div class="reviewer-name">Emma S.</div>
-                                <div class="review-date">15 nov 2024</div>
-                            </div>
-                        </div>
-                        <div class="review-stars">★★★★★</div>
+                        <span class="reviewer-name">Emma S.</span>
+                        <span class="review-date">2024-01-15</span>
                     </div>
-                    <p class="review-text">
-                        Perfekt för mig som student! Lagom stor och lätt att rengöra. Har använt den varje dag i en månad nu och den fungerar fortfarande lika bra.
-                    </p>
+                    <div class="product-rating">★★★★★</div>
+                    <p class="review-text">Perfekt storlek för mig som bor ensam! Funkar jättebra och lätt att rengöra.</p>
                 </div>
-
                 <div class="review-card">
                     <div class="review-header">
-                        <div class="reviewer">
-                            <div class="reviewer-avatar">A</div>
-                            <div>
-                                <div class="reviewer-name">Anton K.</div>
-                                <div class="review-date">8 nov 2024</div>
-                            </div>
-                        </div>
-                        <div class="review-stars">★★★★★</div>
+                        <span class="reviewer-name">Marcus L.</span>
+                        <span class="review-date">2024-01-10</span>
                     </div>
-                    <p class="review-text">
-                        Bra pris för kvaliteten! Non-stick beläggningen fungerar bra och det fastnar ingenting. Rekommenderas!
-                    </p>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="reviewer">
-                            <div class="reviewer-avatar">S</div>
-                            <div>
-                                <div class="reviewer-name">Sara L.</div>
-                                <div class="review-date">2 nov 2024</div>
-                            </div>
-                        </div>
-                        <div class="review-stars">★★★★☆</div>
-                    </div>
-                    <p class="review-text">
-                        Helt okej för priset. Kunde varit lite tyngre kanske, men fungerar bra för äggröra och pannkakor.
-                    </p>
+                    <div class="product-rating">★★★★★</div>
+                    <p class="review-text">Bra kvalitet för priset. Använder den varje dag och inget fastnar!</p>
                 </div>
             </div>
         </div>
@@ -1386,60 +1005,38 @@
     <div id="cart" class="page">
         <div class="container">
             <h2>Din kundvagn</h2>
-            
             <div class="cart-container">
                 <div class="cart-items">
                     <div class="cart-item">
-                        <div class="cart-item-image">🍳</div>
-                        <div class="cart-item-info">
-                            <h4>Stekpanna 24cm</h4>
-                            <p>Aluminium med non-stick</p>
+                        <div class="cart-item-image">
+                            <img src="https://images.pexels.com/photos/3298607/pexels-photo-3298607.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Stekpanna">
                         </div>
-                        <div class="cart-item-qty">
-                            <button>-</button>
-                            <span>1</span>
-                            <button>+</button>
+                        <div class="cart-item-details">
+                            <h4>Stekpanna 24cm</h4>
+                            <p>Antal: 1</p>
                         </div>
                         <div class="cart-item-price">149 kr</div>
-                        <div class="cart-item-remove">✕</div>
+                        <button class="remove-btn">✕</button>
                     </div>
-
                     <div class="cart-item">
-                        <div class="cart-item-image">📦</div>
-                        <div class="cart-item-info">
-                            <h4>Flytta hemifrån-paketet</h4>
-                            <p>Komplett köksset</p>
+                        <div class="cart-item-image">
+                            <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&q=80&w=200" alt="Flytta hemifrån-paketet">
                         </div>
-                        <div class="cart-item-qty">
-                            <button>-</button>
-                            <span>1</span>
-                            <button>+</button>
+                        <div class="cart-item-details">
+                            <h4>Flytta hemifrån-paketet</h4>
+                            <p>Antal: 1</p>
                         </div>
                         <div class="cart-item-price">599 kr</div>
-                        <div class="cart-item-remove">✕</div>
+                        <button class="remove-btn">✕</button>
                     </div>
                 </div>
 
                 <div class="cart-summary">
-                    <h3>Sammanfattning</h3>
-                    <div class="summary-row">
-                        <span>Delsumma</span>
-                        <span>748 kr</span>
-                    </div>
-                    <div class="summary-row">
-                        <span>Frakt</span>
-                        <span>49 kr</span>
-                    </div>
-                    <div class="summary-row total">
-                        <span>Totalt</span>
-                        <span class="price">797 kr</span>
-                    </div>
-                    <button class="btn btn-primary" style="width: 100%; margin-top: 1rem;" onclick="showPage('checkout')">
-                        Gå till kassan
-                    </button>
-                    <button class="btn btn-outline" style="width: 100%; margin-top: 0.5rem;" onclick="showPage('products')">
-                        Fortsätt handla
-                    </button>
+                    <h3>Summering</h3>
+                    <div class="summary-row"><span>Delsumma</span><span>748 kr</span></div>
+                    <div class="summary-row"><span>Frakt</span><span>49 kr</span></div>
+                    <div class="summary-row total"><span>Totalt</span><span class="price">797 kr</span></div>
+                    <button class="btn btn-primary" style="width: 100%; margin-top: 1rem;" onclick="showPage('checkout')">Till kassan</button>
                 </div>
             </div>
         </div>
@@ -1449,104 +1046,46 @@
     <div id="checkout" class="page">
         <div class="container">
             <h2>Kassa</h2>
-            
             <div class="checkout-container">
                 <div class="checkout-form">
                     <div class="form-section">
-                        <h3>Kontaktuppgifter</h3>
-                        <div class="form-group">
-                            <label>E-postadress</label>
-                            <input type="email" placeholder="din@email.se">
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label>Förnamn</label>
-                                <input type="text" placeholder="Förnamn">
-                            </div>
-                            <div class="form-group">
-                                <label>Efternamn</label>
-                                <input type="text" placeholder="Efternamn">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label>Telefon</label>
-                            <input type="tel" placeholder="07X XXX XX XX">
-                        </div>
-                    </div>
-
-                    <div class="form-section">
                         <h3>Leveransadress</h3>
-                        <div class="form-group">
-                            <label>Adress</label>
-                            <input type="text" placeholder="Gatuadress">
-                        </div>
                         <div class="form-row">
-                            <div class="form-group">
-                                <label>Postnummer</label>
-                                <input type="text" placeholder="XXX XX">
-                            </div>
-                            <div class="form-group">
-                                <label>Ort</label>
-                                <input type="text" placeholder="Stad">
-                            </div>
+                            <div class="form-group"><label>Förnamn</label><input type="text" placeholder="Förnamn"></div>
+                            <div class="form-group"><label>Efternamn</label><input type="text" placeholder="Efternamn"></div>
+                        </div>
+                        <div class="form-group"><label>E-postadress</label><input type="email" placeholder="din@email.se"></div>
+                        <div class="form-group"><label>Telefonnummer</label><input type="tel" placeholder="07X XXX XX XX"></div>
+                        <div class="form-group"><label>Adress</label><input type="text" placeholder="Gatuadress"></div>
+                        <div class="form-row">
+                            <div class="form-group"><label>Postnummer</label><input type="text" placeholder="XXX XX"></div>
+                            <div class="form-group"><label>Ort</label><input type="text" placeholder="Stad"></div>
                         </div>
                     </div>
 
                     <div class="form-section">
                         <h3>Betalning</h3>
                         <div class="payment-methods">
-                            <div class="payment-method active">
-                                <div class="payment-method-icon">💳</div>
-                                <div>Kort</div>
-                            </div>
-                            <div class="payment-method">
-                                <div class="payment-method-icon">📱</div>
-                                <div>Swish</div>
-                            </div>
-                            <div class="payment-method">
-                                <div class="payment-method-icon">🏦</div>
-                                <div>Klarna</div>
-                            </div>
+                            <div class="payment-method active"><div class="payment-method-icon">💳</div><div>Kort</div></div>
+                            <div class="payment-method"><div class="payment-method-icon">📱</div><div>Swish</div></div>
+                            <div class="payment-method"><div class="payment-method-icon">🏦</div><div>Klarna</div></div>
                         </div>
-                        <div class="form-group">
-                            <label>Kortnummer</label>
-                            <input type="text" placeholder="XXXX XXXX XXXX XXXX">
-                        </div>
+                        <div class="form-group"><label>Kortnummer</label><input type="text" placeholder="XXXX XXXX XXXX XXXX"></div>
                         <div class="form-row">
-                            <div class="form-group">
-                                <label>Utgångsdatum</label>
-                                <input type="text" placeholder="MM/ÅÅ">
-                            </div>
-                            <div class="form-group">
-                                <label>CVC</label>
-                                <input type="text" placeholder="XXX">
-                            </div>
+                            <div class="form-group"><label>Utgångsdatum</label><input type="text" placeholder="MM/ÅÅ"></div>
+                            <div class="form-group"><label>CVC</label><input type="text" placeholder="XXX"></div>
                         </div>
                     </div>
 
-                    <button class="btn btn-primary" style="width: 100%;" onclick="showPage('success')">
-                        Slutför köp - 797 kr
-                    </button>
+                    <button class="btn btn-primary" style="width: 100%;" onclick="showPage('success')">Slutför köp - 797 kr</button>
                 </div>
 
                 <div class="cart-summary">
                     <h3>Din beställning</h3>
-                    <div class="summary-row">
-                        <span>Stekpanna 24cm × 1</span>
-                        <span>149 kr</span>
-                    </div>
-                    <div class="summary-row">
-                        <span>Flytta hemifrån-paketet × 1</span>
-                        <span>599 kr</span>
-                    </div>
-                    <div class="summary-row">
-                        <span>Frakt</span>
-                        <span>49 kr</span>
-                    </div>
-                    <div class="summary-row total">
-                        <span>Totalt</span>
-                        <span class="price">797 kr</span>
-                    </div>
+                    <div class="summary-row"><span>Stekpanna 24cm × 1</span><span>149 kr</span></div>
+                    <div class="summary-row"><span>Flytta hemifrån-paketet × 1</span><span>599 kr</span></div>
+                    <div class="summary-row"><span>Frakt</span><span>49 kr</span></div>
+                    <div class="summary-row total"><span>Totalt</span><span class="price">797 kr</span></div>
                 </div>
             </div>
         </div>
@@ -1566,48 +1105,22 @@
             </div>
 
             <div id="login-form" class="auth-form">
-                <div class="form-group">
-                    <label>E-postadress</label>
-                    <input type="email" placeholder="din@email.se">
-                </div>
-                <div class="form-group">
-                    <label>Lösenord</label>
-                    <input type="password" placeholder="••••••••">
-                </div>
+                <div class="form-group"><label>E-postadress</label><input type="email" placeholder="din@email.se"></div>
+                <div class="form-group"><label>Lösenord</label><input type="password" placeholder="••••••••"></div>
                 <button class="btn btn-primary" onclick="showPage('home')">Logga in</button>
-                
-                <div class="auth-divider">
-                    <span>eller</span>
-                </div>
-                
+                <div class="auth-divider"><span>eller</span></div>
                 <button class="btn btn-outline">Fortsätt med Google</button>
             </div>
 
             <div id="register-form" class="auth-form" style="display: none;">
                 <div class="form-row">
-                    <div class="form-group">
-                        <label>Förnamn</label>
-                        <input type="text" placeholder="Förnamn">
-                    </div>
-                    <div class="form-group">
-                        <label>Efternamn</label>
-                        <input type="text" placeholder="Efternamn">
-                    </div>
+                    <div class="form-group"><label>Förnamn</label><input type="text" placeholder="Förnamn"></div>
+                    <div class="form-group"><label>Efternamn</label><input type="text" placeholder="Efternamn"></div>
                 </div>
-                <div class="form-group">
-                    <label>E-postadress</label>
-                    <input type="email" placeholder="din@email.se">
-                </div>
-                <div class="form-group">
-                    <label>Lösenord</label>
-                    <input type="password" placeholder="Minst 8 tecken">
-                </div>
+                <div class="form-group"><label>E-postadress</label><input type="email" placeholder="din@email.se"></div>
+                <div class="form-group"><label>Lösenord</label><input type="password" placeholder="Minst 8 tecken"></div>
                 <button class="btn btn-primary" onclick="showPage('home')">Skapa konto</button>
-                
-                <div class="auth-divider">
-                    <span>eller</span>
-                </div>
-                
+                <div class="auth-divider"><span>eller</span></div>
                 <button class="btn btn-outline">Fortsätt med Google</button>
             </div>
         </div>
@@ -1620,22 +1133,18 @@
                 <div class="success-icon">✓</div>
                 <h1>Tack för din beställning!</h1>
                 <p>En bekräftelse har skickats till din e-postadress.</p>
-                <div class="order-number">
-                    Ordernummer: <span>#SK-2024-1847</span>
-                </div>
+                <div class="order-number">Ordernummer: <span>#SK-2024-1847</span></div>
                 <p>Beräknad leverans: 3-5 arbetsdagar</p>
                 <button class="btn btn-primary" onclick="showPage('home')">Fortsätt handla</button>
             </div>
         </div>
     </div>
 
-    <!-- Toast Notification -->
     <div class="toast" id="toast">
         <span class="toast-icon">✓</span>
         <span id="toast-message">Tillagd i kundvagnen!</span>
     </div>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-content">
             <div class="footer-brand">
@@ -1670,23 +1179,18 @@
     </footer>
 
     <script>
-        // Page navigation
         function showPage(pageId) {
-            document.querySelectorAll('.page').forEach(page => {
-                page.classList.remove('active');
-            });
+            document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
             document.getElementById(pageId).classList.add('active');
             window.scrollTo(0, 0);
         }
 
-        // Quantity selector
         let qty = 1;
         function updateQty(change) {
             qty = Math.max(1, qty + change);
             document.getElementById('qty').textContent = qty;
         }
 
-        // Add to cart
         let cartCount = 2;
         function addToCart(product, price) {
             cartCount++;
@@ -1694,26 +1198,20 @@
             showToast(`${product} tillagd i kundvagnen!`);
         }
 
-        // Toast notification
         function showToast(message) {
             const toast = document.getElementById('toast');
             document.getElementById('toast-message').textContent = message;
             toast.classList.add('show');
-            setTimeout(() => {
-                toast.classList.remove('show');
-            }, 3000);
+            setTimeout(() => toast.classList.remove('show'), 3000);
         }
 
-        // Auth tabs
         function switchAuthTab(tab, formType) {
             document.querySelectorAll('.auth-tab').forEach(t => t.classList.remove('active'));
             tab.classList.add('active');
-            
             document.getElementById('login-form').style.display = formType === 'login' ? 'block' : 'none';
             document.getElementById('register-form').style.display = formType === 'register' ? 'block' : 'none';
         }
 
-        // Filter buttons
         document.querySelectorAll('.filter-btn').forEach(btn => {
             btn.addEventListener('click', function() {
                 document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
@@ -1721,7 +1219,6 @@
             });
         });
 
-        // Payment method selection
         document.querySelectorAll('.payment-method').forEach(method => {
             method.addEventListener('click', function() {
                 document.querySelectorAll('.payment-method').forEach(m => m.classList.remove('active'));
